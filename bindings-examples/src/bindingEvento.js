@@ -19,7 +19,7 @@ export class bindingEvento extends LitElement{
     doChange(e){
         this.activo=e.target.checked;
     }
-    
+     
     render(){
         return html`
             <p>

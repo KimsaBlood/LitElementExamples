@@ -5,7 +5,8 @@ import {incrementarContador,decrementarContador,cambiarAppName} from './redux/ac
 export class CounterUserInterface extends LitElement{
     static get properties(){
         return{
-            name:{type:String}
+            name:{type:String},
+            val:{type:Number}
         }
     }
 
@@ -22,8 +23,10 @@ export class CounterUserInterface extends LitElement{
             <input @change=${this.changeApp}>
         `;
     }
-
+    
     changeApp(e){
+        let square=number =>number*number;
+        alert(square)
         this.name=e.target.value;
         store.dispatch(cambiarAppName(this.name));
     }
